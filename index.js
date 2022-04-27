@@ -98,11 +98,35 @@ function 모름함수(x) {
 // 속성명 in object 자료
 // 인스턴스 instanceof 부모
 //Narrowing 말고 다른 방법
-//assertion 문법 용도 
+//assertion 문법 용도
 //1.Narrowing 할때 사용함 (타입을 변경시켜주는것이 아님)
-//2.어떤 타입이 들어오는지 알 수 있을때 
-//3.왜 에러나는지 모를때 디버깅용으로 사용할것 
+//2.어떤 타입이 들어오는지 알 수 있을때
+//3.왜 에러나는지 모를때 디버깅용으로 사용할것
 function 모름함수2(x) {
     var array = [];
     array[0] = x;
 }
+var 동물 = "asd";
+var 동물2 = { name: "kim", age: 20 };
+//재할당 금지 키워드 const
+var 출생지역 = "seoul";
+// 객체의 값은 변화 가능 객체는 래퍼런스타입이라 주소값을 이용하기 때문에
+var 출생객체 = { region: "seoul" };
+출생객체.region = "busan";
+var 여친 = {
+    name: "엠버",
+};
+var position = { x: 10, y: 20 };
+var 테스트객체 = {
+    color: "blue",
+    size: 1234,
+    position: [123, 123, 1233],
+};
+var userinfo = {
+    name: "kim",
+    phone: 1020203222,
+    email: "asdasd-12313",
+    adult: false,
+};
+//넘버타입은 010으로 시작하는 것은 판별 못함
+//이유는 ECMAScript 5 이상을 대상으로 하는 경우 8진수 리터럴을 사용할 수 없습니다. '0o1020203222' 구문을 사용하세요.
