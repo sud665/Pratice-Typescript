@@ -230,4 +230,33 @@ let userinfo: NewType1 = {
 //넘버타입은 010으로 시작하는 것은 판별 못함
 //이유는 ECMAScript 5 이상을 대상으로 하는 경우 8진수 리터럴을 사용할 수 없습니다. '0o1020203222' 구문을 사용하세요.
 
+// Literal Types cosnt 변수 유사품 사용
 
+// 좀 더 엄격한 타입 지정가능
+// 타입대신 값을 선언한다. 자동완성기능도 쉬워서 사용한다.
+
+function rockssisorpaper(
+  a: "가위" | "바위" | "보"
+): ("가위" | "바위" | "보")[] {
+  return ["가위"];
+}
+
+//literal type의 문제점 해결 as const
+
+let data = {
+  name: "kim",
+} as const;
+
+function checkfunc(a: "kim") {}
+
+checkfunc(data.name);
+
+// 함수에 type alias를 적용하려면 함수표현식으로 써야함 한다
+
+type 함수타입 = (a: string) => number;
+
+let 특수함수: 함수타입 = function () {
+  return 10;
+};
+
+// 객체 안에 함수도 만들수 있음

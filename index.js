@@ -130,3 +130,19 @@ var userinfo = {
 };
 //넘버타입은 010으로 시작하는 것은 판별 못함
 //이유는 ECMAScript 5 이상을 대상으로 하는 경우 8진수 리터럴을 사용할 수 없습니다. '0o1020203222' 구문을 사용하세요.
+// Literal Types cosnt 변수 유사품 사용
+// 좀 더 엄격한 타입 지정가능
+// 타입대신 값을 선언한다. 자동완성기능도 쉬워서 사용한다.
+function rockssisorpaper(a) {
+    return ["가위"];
+}
+//literal type의 문제점 해결 as const
+var data = {
+    name: "kim",
+};
+function checkfunc(a) { }
+checkfunc(data.name);
+var 특수함수 = function () {
+    return 10;
+};
+// 객체 안에 함수도 만들수 있음
